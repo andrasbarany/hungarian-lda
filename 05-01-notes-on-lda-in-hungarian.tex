@@ -6,7 +6,8 @@
 \input{\string~/Cloud/LaTeX/Templates/article-preamble.tex}
 
 \addbibresource{legenda.bib}
-\usepackage{enumitem}
+
+\usepackage{xurl}
 
 \newleipzig{MNSZ}{MNSZ}{Magyar Nemzeti Szövegtár (Hungarian National Corpus)}
 
@@ -23,12 +24,12 @@
 \section{Introduction}\label{sec:introduction}
 
 Infinitival complements in Hungarian appear with different classes of verbs. It
-is usually said that transitive verbs taking infinitival complements can agree
-with the object of the infinitive, but intransitives cannot
-\parencite{EKiss1987,EKiss1989,KalmanCetal1989,KenVagFeny1998,EKiss2002,EKissvanRie2004b,denDikken2004,Coppock2012d,Szecsenyi2017,SzeSze2018},
-where transitive verbs are those that can take an accusative object and
-intransitive verbs are those that cannot.
-
+is usually said that verbs that can select for \Acc{} objects
+(\enquote{transitive} verbs) can agree with the object an infinitival
+complement, but verbs that do not select for \Acc{} objects
+(\enquote{intransitive} verbs) cannot
+\parencite{EKiss1987,EKiss1989,KalmanCetal1989,KenVagFeny1998,EKiss2002,EKissvanRie2004b,denDikken2004,Coppock2012d,Szecsenyi2017,SzeSze2018}.
+%
 The construction in question is shown in~\eqref{ex:inf-compl}, with examples
 in~\eqref{ex:itv-inf} and~\eqref{ex:tv-inf}.\footnote{Abbreviations:
 \printglosses}
@@ -77,63 +78,26 @@ in~\eqref{ex:itv-inf} and~\eqref{ex:tv-inf}.\footnote{Abbreviations:
         \glft 	\enquote*{Anna tried to learn the poem.}\trailingcitation{\parencite[33]{KenVagFeny1998}}//
     \endgl
 \xe
-\ref{pattern:itv} and~\ref{pattern:tv} show the main patterns that are
-discussed in the literature:
 
-\begin{enumerate}[label=\textbf{\Alph*.}]
+It is generally argued in the literature that if the matrix verb cannot take an
+\Acc{} \gls{DO}, it will always show subject agreement even if the \gls{DO} of
+its infinitival complement is a definite third person object, as
+in~(\ref{ex:itv-inf}a,b). The only exception to this is claimed to occur with
+second person \glspl{DO}, which allow the \emph{-lak/-lek} object agreement
+form, as in (\ref{ex:itv-inf}c). With matrix verbs that do take \Acc{}
+\glspl{DO}, agreement on the matrix verb depends on the definiteness of the
+infinitive's \gls{DO}.
 
-    \item 	intransitive matrix verb\label{pattern:itv}
-
-        \begin{enumerate}[label=\arabic*.]
-
-        \item 	\makebox[0pt][l]{intransitive infinitive}\phantom{transitive
-            infinitive, \Indef{}/\Def.\Obj{}} \ding{224} finite verb with \Sbj{}
-            agreement\label{itv-itv}
-
-        \item 	\makebox[0pt][l]{transitive infinitive,
-            \Indef{}/\Def.\Obj{}}\phantom{transitive infinitive,
-            \Indef{}/\Def.\Obj{}} \ding{224} finite
-            verb with \Sbj{} agreement\label{itv-tv}
-
-        \item 	\makebox[0pt][l]{transitive infinitive,
-            \Second{}.\Obj{}}\phantom{transitive infinitive, \Indef{}/\Def.\Obj{}}
-            \ding{224} finite verb with \emph{-lak/-lek} agreement\label{itv-2}
-
-    \end{enumerate}
-
-    \item 	transitive matrix verb\label{pattern:tv}
-
-    \begin{enumerate}[label=\arabic*.]
-
-        \item 	\makebox[0pt][l]{intransitive infinitive}\phantom{transitive
-            infinitive, \Indef{}/\Def.\Obj{}} \ding{224} finite verb with \Sbj{}
-            agreement\label{tv-itv}
-
-        \item 	\makebox[0pt][l]{transitive infinitive,
-            \Indef{}.\Obj{}}\phantom{transitive infinitive,
-            \Indef{}/\Def.\Obj{}} \ding{224} finite verb with \Sbj{}
-            agreement\label{tv-indef}
-
-        \item 	\makebox[0pt][l]{transitive infinitive,
-            \Def{}.\Obj{}}\phantom{transitive infinitive, \Indef{}/\Def.\Obj{}}
-            \ding{224} finite verb with \Obj{} agreement\label{tv-def}
-
-    \end{enumerate}
-
-\end{enumerate}
-
-Examples~(\ref{ex:itv-inf}a--c) and (\ref{ex:tv-inf}a--b) correspond to points
-\ref{pattern:itv}\ref{itv-itv}--\ref{itv-2} and
-\ref{pattern:tv}\ref{tv-itv}/\ref{tv-def}, respectively. The main claim of this
-paper is that the empirical picture is more complex than illustrated by these
-examples. In particular, there is evidence that intransitive matrix verbs, that
-is verbs that do not by themselves take \Acc{} objects, \textbf{can
-nevertheless agree with the definite third person object of the infinitive}.
-An example is shown in:\glsunset{MNSZ}
+The main claim of this paper is that the empirical picture is more complex than
+indicated by~\eqref{ex:itv-inf} and~\eqref{ex:tv-inf}. In particular, there is
+evidence that intransitive matrix verbs, that is verbs that do not by
+themselves take \Acc{} \glspl{DO}, \textbf{can nevertheless agree with the
+definite third person object of the infinitive}.  An example is shown
+in (\nextx):\glsunset{MNSZ}
 
 \ex \textbf{Intransitive matrix verb, transitive infinitive and object agreement}\\
     \begingl
-        \glpreamble \gls{MNSZ}/doc\#2886//
+        \glpreamble \Obj --- finite verb --- \Inf{} [321]; \gls{MNSZ}/doc\#2886//
         \gla 	\nogloss{\dots{}} hogy élet-em egyik legnagyobb hülyeség-é-t
         \textbf{készül-öm} {véghez vin-ni}.//
         \glb 	that life-\Fsg.\Poss{} one biggest
@@ -143,13 +107,13 @@ An example is shown in:\glsunset{MNSZ}
     \endgl
 \xe
 
-I suggest that speakers who produce and allow patterns like (\lastx) do so in
-analogy to the pattern in~\eqref{ex:tv-inf}. The verbs in~\eqref{ex:itv-inf}
+I suggest that speakers who produce and allow structures like (\lastx) do so in
+analogy to the structure in~\eqref{ex:tv-inf}. The verbs in~\eqref{ex:itv-inf}
 and (\lastx) do not generally have \Acc{} \glspl{DO} and do not agree with any
 non-subject argument, but the verbs in~\eqref{ex:tv-inf} have \Acc{} \glspl{DO}
 of their own and agree with them, or straightforwardly agree with the
 \glspl{DO} of their infinitival copmlement (hence \enquote{long-distance}
-agreement). I sketch an analysis of this mechanism in~\Cref{sec:analysis}.
+agreement).
 
 In addition, I argue that the data shown below and found in corpora indicate
 that second person \glspl{DO} of infinitival complements do not trigger object
@@ -157,58 +121,35 @@ agreement more readily than third person objects, suggesting that there is a
 single agreement mechanism responsible for both. Differences in acceptability
 of second vs.\ third person objects in these contexts as reported by
 \textcites[227]{EKiss1987}[54]{EKiss2002}[61]{KalmanCetal1989}[451]{denDikken2004}
-might either be less strong than expressed there or due to other factors,
+are weaker than expressed there or they might be due to other factors,
 including verb morphology.
 
 \section{Data}\label{sec:data}
 
 \eqref{data:itv-inf} presents some intransitive predicates, which do not have
 \Acc{} \glspl{DO}, and which are said not to agree with the \Acc{} object of
-their infinitival complement (pattern~\ref{pattern:itv}\ref{itv-tv}) (see
-e.g.~\citealt[226]{EKiss1987}, \citealt[54]{EKiss2002},
-\citealt[60--61]{KalmanCetal1989}, \citealt[79]{SzeSze2018} on
-\emph{igyekszik}, \citealt[61]{KalmanCetal1989}, \citealt[449,
-451]{denDikken2004} on \emph{jön}, \citealt[79]{SzeSze2018} on and
-\emph{készül}).
+their infinitival complement (see e.g.~\citealt[226]{EKiss1987},
+\citealt[54]{EKiss2002}, \citealt[60--61]{KalmanCetal1989},
+\citealt[79]{SzeSze2018} on \emph{igyekszik}, \citealt[61]{KalmanCetal1989},
+\citealt[449, 451]{denDikken2004} on \emph{jön}, \citealt[79]{SzeSze2018} on
+and \emph{készül}).
 
-\ex\label{data:itv-inf}\textbf{Intransitive (no \Acc{} \gls{DO}) verbs taking infinitival complements}\\
-    \emph{igyekszik} \enquote*{strive}\\
-    \emph{jár} \enquote*{go (regularly)}\\
-    \emph{(el)jön} \enquote*{come}\\
-    \emph{készül} \enquote*{prepare}\\
-    \emph{próbálkozik} \enquote*{attempt}\\
-    \emph{siet} \enquote*{hurry}\\
+\ex\label{data:itv-inf}\textbf{Intransitive verbs (no \Acc{} \gls{DO}) taking infinitival complements}\\
+    \emph{igyekszik} \enquote*{strive}, \emph{jár} \enquote*{go (regularly)},
+    \emph{(el)jön} \enquote*{come}, \emph{készül} \enquote*{prepare},
+    \emph{próbálkozik} \enquote*{attempt}, \emph{siet} \enquote*{hurry},
+    \dots{}
 \xe
 \eqref{data:tv-inf} shows transitive verbs which take \Acc{} \glspl{DO} and
 which allow object agreement; whether agreement appears or not depends on
 syntactic and semantic properties of the object
 \parencite{Bartos1999,EKiss2002,denDikken2006,CopWec2012b,Coppock2013P,Barany2015d,Barany2017}.
 
-\ex\label{data:tv-inf}\textbf{Transitive (\Acc{} \gls{DO}) verbs taking infinitival complements}\\
-    \emph{akar} \enquote*{want}\\
-    \emph{fog} (future auxiliary)\\
-    \emph{megpróbál} \enquote*{try}\\
-    \emph{un} \enquote*{find boring}\\
+\ex\label{data:tv-inf}\textbf{Transitive verbs (\Acc{} \gls{DO}) taking infinitival complements}\\
+    \emph{akar} \enquote*{want}, \emph{fog} (future auxiliary),
+    \emph{megpróbál} \enquote*{try}, \emph{un} \enquote*{find boring},
     \emph{utál} \enquote*{hate}, \dots{}
 \xe
-%Some properties other than object agreement cross-cut the distinction between
-%(\blastx) and (\lastx), e.g.\ movement of the verbal modifier (\Vm) or pre-verb
-%\parencite{EKissvanRie2004b}.
-%
-%\pex
-%    \a
-%    \begingl
-%        \gla 	János utál-ja Mari-t fel hív-ni telefon-on.//
-%        \glb 	János hate-\Tsg.\Sbj>\Third.\Obj{} Mari-\Acc{} \Vm{} call-\Inf{} phone-\Supe{}//
-%        \glft 	\enquote*{János hates to call Mary on the phone.}//
-%    \endgl
-%    \a
-%    \begingl
-%        \gla 	János fel fog-ja akar-ni hív-ni Mari-t telefon-on.//
-%        \glb 	János \Vm{} \Fut.\Aux{}-\Tsg.\Sbj>\Third.\Obj{} want-\Inf{} call-\Inf{} Mari-\Acc{} phone-\Supe{}//
-%        \glft 	\enquote*{János will want to call Mari on the phone.}\trailingcitation{\parencite[14]{EKissvanRie2004b}}//
-%    \endgl
-%\xe
 
 \subsection{Agreement of intransitive verbs with \Third{}rd person
     objects}\label{sub:agr-3rd}
@@ -217,14 +158,14 @@ The intransitive verbs in~\eqref{data:itv-inf} lacking \Acc{} \glspl{DO} can
 appear with both \Sbj{} and \Obj{} agreement when they have infinitival
 complements, in what seem to be the exact same environments as the transitive
 verbs in~\eqref{data:tv-inf}.
-
+%
 In this section, I illustrate a selection of attested examples with the
 predicates listed in~\eqref{data:itv-inf} and subjects with different
 φ-features. The data are from the Hungarian National Corpus, the
 \enquote{Magyar nemzeti szövegtár} (MNSZ; \url{http://corpus.nytud.hu/mnsz/})
-and other sources on the internet. See~\Cref{app:sources} for a link to the
-full data set. Each example is coded with a permutation of [123], indicating
-the order of the finite matrix verb (1), the infinitive (2) and the object (3).
+and other sources on the internet (see~\Cref{app:sources}). Each example is
+coded with a permutation of 123, indicating the order of the finite matrix verb
+(1), the infinitive (2) and the object (3).
 
 \subsubsection{First person singular subject, third person
 object}\label{ssub:fsg-obj}
@@ -245,61 +186,13 @@ examples with \emph{készül} (29 with third person objects).
 
 \ex\label{ex:windows-keszul}%
     \begingl
-        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
+        \glpreamble \Obj{} --- finite verb --- \Inf{} [312];
+        \Cref{app:sources}//
         \gla 	A {Windows XP}-t \textbf{készül-öm} levált-ani linux-ra \nogloss{\dots}//
         \glb 	the {Windows XP}-\Acc{} prepare-\Fsg.\Sbj>\Third.\Obj{} change-\Inf{} linux-\Subl{}//
         \glft 	\enquote*{I am planning to switch from Windows XP to Linux.}//
     \endgl
 \xe
-% \ex
-%     \begingl
-%         \glpreamble \Obj{} --- finite verb --- \Inf{}//
-%         \gla 	\nogloss{\dots} van egy nagyon szimpatikus kölyök, most ő-t készül-\textbf{öm} elhoz-ni.//
-%         \glb 	is a very nice cub now \Tsg-\Acc{} prepare-\Fsg.\Sbj>\Third.\Obj{} {pick up}-\Inf{}//
-%         \glft 	\enquote*{\dots{} there's a very nice cub, I'm preparing to pick it up now.}\trailingcitation{\url{https://goo.gl/ytQ6pI}}//
-%     \endgl
-% \xe
-%
-%\ex
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{}//
-%        \gla 	\nogloss{\dots} mégis most az-t készül-\textbf{öm} ten-ni.//
-%        \glb 	nevertheless now that-\Acc{} prepare-\Fsg.\Sbj>\Third.\Obj{} do-\Inf//
-%        \glft 	\enquote*{\dots{} nevertheless I am preparing to do that now.}\trailingcitation{\url{https://goo.gl/11iQUx}}//
-%    \endgl
-%\xe
-%\ex\label{ex:hatnap-keszul}%
-%    \begingl
-%        \glpreamble \Obj{} --- \Inf{} --- finite verb [321]//
-%        \gla	Most, hogy hat nap eltelté-vel beszámoló-m-at külde-ni készül-öm, \nogloss{\dots}//
-%        \glb	now that six days passing-\Com{} report-\Fsg-\Acc{} send-\Inf{} prepare-\Fsg.\Sbj>\Third.\Obj{}//
-%        \glft	\enquote*{Now that I am preparing to send my report after six days have passed \dots{}}\trailingcitation{}//
-%    \endgl
-%\xe
-%\ex
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{}//
-%        \gla	egyik-nél már a második falu-t készül-öm létrehoz-ni//
-%        \glb	one-\Ade{} already the second village-\Acc{} prepare-\Fsg.\Sbj>\Third.\Obj{} create-\Inf{}//
-%        \glft	\enquote*{With one of them, I'm preparing to create the second village already.}\trailingcitation{\url{http://forum.travian.hu/showthread.php?t=231&page=558}}//
-%    \endgl
-%\xe
-%\ex\label{ex:bojt-keszul}%
-%    \begingl
-%        \glpreamble finite verb --- \Obj{} --- \Inf{} [132]//
-%        \gla 	\nogloss{\dots} azért, mert készül-öm a böjt-öt fogad-ni.//
-%        \glb 	{for the reason} because prepare-\Fsg.\Sbj>\Third.\Obj{} the fast-\Acc{} welcome//
-%        \glft 	\enquote*{\dots{} because I am preparing to follow the fast}\trailingcitation{}//
-%    \endgl
-%\xe
-%\ex\label{ex:elhagyni-keszul}%
-%    \begingl
-%        \glpreamble \Inf{} --- finite verb --- \Obj{} [213]//
-%        \gla 	Elhagy-ni készül-öm a város-t.//
-%        \glb 	leave-\Inf{} prepare-\Fsg.\Sbj>\Third.\Obj{} the city-\Acc{}//
-%        \glft 	\enquote*{I am preparing to leave the city.}\trailingcitation{}//
-%    \endgl
-%\xe
 
 \subsubsection{Second person singular subject, third person object}\label{sub:2-3}
 
@@ -316,39 +209,23 @@ not all transitive verbs in~\eqref{data:tv-inf}
 
 \ex\label{ex:oxford-keszul}%
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
+        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]; \Cref{app:sources}//
         \gla 	Bocs, ha épp \textbf{készül-t-ed} betanul-ni az Oxford nagyszótár-at.//
         \glb 	sorry if just prepare-\Pst-\Ssg.\Sbj>\Third.\Obj{} learn the Oxford big.dictionary-\Acc//
         \glft 	\enquote*{Sorry if you were just preparing to learn the Oxford dictionary by heart.}\trailingcitation{}//
     \endgl
 \xe
-%\ex\label{ex:fuszer-probal}%
-%    \begingl
-%        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
-%        \gla 	Ha te magad próbálkoz-od összeöntöget-ni a fűszer-ek-et \nogloss{\dots}//
-%        \glb 	if you yourself try-\Tsg.\Sbj>\Third.\Obj{} mix-\Inf{} the spice-\Pl-\Acc{}//
-%        \glft 	\enquote*{If you try to mix the spices yourself \dots}\trailingcitation{}//
-%    \endgl
-%\xe
 \ex\label{ex:siet-almagyar}
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} (CP) [123]//
+        \glpreamble finite verb --- \Inf{} --- \Obj{} (CP) [123]; \gls{MNSZ}/doc\#972//
         \gla 	Hiszen mindig \textbf{siet-ed} {kikér-ni magad-nak}, hogy ál-magyar len-né-l.//
         \glb 	since always hurry-\Tsg.Sbj>\Tsg.\Obj{} protest that fake-Hungarian be-\Cond.\Tsg-\Sbj{}//
         \glft 	\enquote*{Since you always hurry to protest that you're a fake Hungarian.}//
     \endgl
 \xe
-%\ex\label{ex:kamera-probal}%
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
-%        \gla 	\nogloss{\dots} még ha csak a kameraszög-et is próbálkoz-od belő-ni.//
-%        \glb 	even if only the {camera angle}-\Acc{} too try-\Tsg.\Sbj>\Third.\Obj{} shoot-\Inf{}//
-%        \glft 	\enquote*{\dots{} even if you're only trying to get the camera angle right}\trailingcitation{}//
-%    \endgl
-%\xe
 \ex\label{ex:meg-probal}%
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \emph{pro} [12\emph{pro}]; \Vm{}-climbing//
+        \glpreamble finite verb --- \Inf{} --- \emph{pro} [12\emph{pro}]; \Vm{}-climbing; \Cref{app:sources}//
         \gla 	\nogloss{\dots} de most teljes üresség van, ha meg
         \textbf{próbálkoz-od} nyit-ni.//
         \glb 	but now complete emptiness \Cop{} if \Vm{} try-\Ssg.\Sbj>\Third.\Obj{} open-\Inf{}//
@@ -364,25 +241,9 @@ The following examples illustrate \emph{készül} and \emph{szándékozik}
 \enquote*{to intend}. Analogous constructions with \emph{igyekszik} and
 \emph{jár} are also attested in the data set.
 
-%\ex\label{ex:bella-keszul}%
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
-%        \gla 	Edward Bellá-t készül-i megcsókol-ni//
-%        \glb 	Edward Bella-\Acc{} prepare-\Tsg.\Sbj>\Third.\Obj{} kiss-\Inf//
-%        \glft 	\enquote*{Edward is preparing to kiss Bella.}\trailingcitation{}//
-%    \endgl
-%\xe
-%\ex\label{ex:lenyul}%
-%    \begingl
-%        \glpreamble \Obj{} --- \Inf{} --- finite verb [321]//
-%        \gla 	\nogloss{\dots} ahogy Sam Witwicky munká-t keres, új barátnő-jé-t, Carly-t lenyúl-ni készül-i annak gyanús főnök-e.//
-%        \glb 	as Sam Witwicky employment-\Acc{} seek.\Tsg.\Sbj{} new girlfriend-\Tsg-\Acc{} Carly-\Acc{} {make off with}-\Inf{} prepare-\Tsg.\Sbj>\Third.\Obj{} her suspicious boss-\Tsg{}//
-%        \glft 	\enquote*{\dots{} her suspicious boss is preparing to make off with [Sam]'s new girlfriend.}\trailingcitation{}//
-%    \endgl
-%\xe
 \ex\label{ex:birtok}%
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
+        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]; \Cref{app:sources}//
         \gla 	\nogloss{\dots} birtok-ba \textbf{készül-i} ven-ni az új föld-jé-t.//
         \glb 	possession-\Ill{} prepare-\Tsg.\Sbj>\Third.\Obj{} take-\Inf{} the new land-\Tsg-\Acc//
         \glft 	\enquote*{\dots{} he wants to take his new plot of land into possession.}\trailingcitation{}//
@@ -390,10 +251,10 @@ The following examples illustrate \emph{készül} and \emph{szándékozik}
 \xe
 \ex\label{ex:barat-szandek}%
     \begingl
-        \glpreamble \Obj{} --- finite verb --- X --- \Inf{} [312]//
+        \glpreamble \Obj{} --- finite verb --- X --- \Inf{} [312]; \Cref{app:sources}//
         \gla 	Barát-já-t \textbf{szándékoz-t-a} magá-val vin-ni.//
         \glb 	friend-\Tsg-\Acc{} intend-\Pst-\Tsg.\Sbj>\Third.\Obj{} \Refl.\Tsg{}-\Com{} bring-\Inf{}//
-        \glft 	\enquote*{S/he intended to bring his/her friend along.}\trailingcitation{\parencite{Kiss1977}}//
+        \glft 	\enquote*{S/he intended to bring his/her friend along.}//
     \endgl
 \xe
 
@@ -405,7 +266,7 @@ shown here for \emph{készül} and \emph{siet}, and also attested for
 
 \ex\label{ex:meat-market}%
     \begingl
-        \glpreamble \Inf --- finite verb --- \Obj{} [213]//
+        \glpreamble \Inf --- finite verb --- \Obj{} [213]; \Cref{app:sources}//
         \gla 	\nogloss{\dots} megválaszt-juk a ruhá-nk-at, megcsinál-juk a
         frizurá-nk-at, az internetes húspiac-on is ugyanúgy elad-ni
         \textbf{készül-jük} magunk-at.//
@@ -413,39 +274,13 @@ shown here for \emph{készül} and \emph{siet}, and also attested for
         \glft 	\enquote*{\dots{} we choose our clothes, we do our hair, and in the same way we prepare to sell ourselves on the online meat market.}\trailingcitation{}//
     \endgl
 \xe
-%\ex\label{ex:sajat}%
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
-%        \gla 	Akár hivatalosak vagy-unk a lagzi-ra, akár a saját-unk-at készül-jük megül-ni \nogloss{\dots}//
-%        \glb 	if invited.\Pl{} be-\Fpl{} the wedding-\Subl{} if the own-\Fpl-\Acc{} prepare-\Fpl.\Sbj>\Third.\Obj{} celebrate-\Inf{}//
-%        \glft 	\enquote*{Whether we're invited to a wedding, or we are preparing to celebrate our own \dots{}}\trailingcitation{}//
-%    \endgl
-%\xe
-%\ex\label{ex:autoban}%
-%    \begingl
-%        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
-%        \gla 	\nogloss{\dots} különösen, ha az autóban készül-jük hagy-ni ő-t.//
-%        \glb 	particularly if the car-\Ine{} prepare-\Fpl.\Sbj>\Third.\Obj{} leave-\Inf{} s/he-\Acc//
-%        \glft 	\enquote*{\dots{} in particular if we plan to leave her/him [a dog!] in the car.}\trailingcitation{}//
-%    \endgl
-%\xe
-%\ex\label{ex:elet}%
-%    \begingl
-%        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
-%        \gla 	\nogloss{\dots} ahol közös élet-ünk elkövetkező minimum 15
-%        év-é-t készül-jük le-él-ni.//
-%        \glb 	where shared life-\Fpl{} following minimum 15 year-\Tsg-\Pl{}
-%        prepare-\Fpl.\Sbj>\Third.\Obj{} \Vm-live-\Inf//
-%        \glft 	\enquote*{\dots{} where we prepare to spend at least 15 years of our future life together.}\trailingcitation{}//
-%    \endgl
-%\xe
-\ex
+\ex\label{ex:siet-civilizacio}
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} [132]//
+        \glpreamble finite verb --- \Inf{} --- \Obj{} [132]; \Cref{app:sources}//
         \gla 	Egy-egy ugrás-sal \textbf{siet-t-ük} utolér-ni a civilizáció-ban és a politikai előhaladás-ban a többi európai nemzet-ek-et \nogloss{\dots}//
         \glb 	one-one jump-\Com{} hurry-\Pst-\Fpl{} {catch up}-\Inf{} the civilisation-\Ine{} and the political progress-\Ine{} the other European nation-\Pl-\Acc{}//
         \glft 	\enquote*{We hurried to catch up the other European nations in
-        civilisation and political progress with one step or another \dots}//%\trailingcitation{\url{http://www.arcanum.hu/hu/online-kiadvanyok/Mikszath-mikszath-osszes-muve-2A85B/cikkek-es-karcolatok-5186-kotet-40CD5/1880-szegedi-naplo-vezercikkek-es-egyeb-politikai-cikkek-59-kotet-4578F/243-sz-oktober-16-a-fenyuzes-45962}}//
+        civilisation and political progress with one step or another \dots}//
     \endgl
 \xe
 
@@ -458,7 +293,7 @@ and~\eqref{ex:magatokat} are present and past tense examples of
 
 \ex\label{ex:mennyi}%
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \emph{pro}//
+        \glpreamble finite verb --- \Inf{} --- \emph{pro}; \Cref{app:sources}//
         \gla 	Mennyi-ért \textbf{készül-itek} ven-ni?//
         \glb 	{how much}-for prepare-\Spl.\Sbj>\Third.\Obj{} buy-\Inf{}//
         \glft 	\enquote*{For how much are you preparing to buy it [a computer]?}\trailingcitation{}//
@@ -466,58 +301,26 @@ and~\eqref{ex:magatokat} are present and past tense examples of
 \xe
 \ex\label{ex:remalom}%
     \begingl
-        \glpreamble finite verb --- \Obj{} --- \Inf{} [132]//
-        \gla 	\nogloss{\dots} azon kívül, hogy igyeksz-itek ez-t a rémálm-ot elfelejt-eni, \nogloss{\dots}//
+        \glpreamble finite verb --- \Obj{} --- \Inf{} [132]; \Cref{app:sources}//
+        \gla 	\nogloss{\dots} azon kívül, hogy \textbf{igyeksz-itek} ez-t a rémálm-ot elfelejt-eni, \nogloss{\dots}//
         \glb 	that apart that strive-\Spl.\Sbj>\Third.\Obj{} this-\Acc{} the nightmare-\Acc{} forget-\Inf//
         \glft 	\enquote*{\dots{} apart from the fact that you strive to forget this nightmare \dots{}}\trailingcitation{}//
     \endgl
 \xe
-%\ex\label{ex:egymast}%
-%    \begingl
-%        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
-%        \gla 	\textbf{Igyeksz-itek} kerül-ni egymást?//
-%        \glb 	strive-\Spl.\Sbj>\Third.\Obj{} avoid-\Inf{} {each other}-\Acc{}//
-%        \glft 	\enquote*{Are you making an effort to avoid each other?}\trailingcitation{}//
-%    \endgl
-%\xe
 \ex\label{ex:magatokat}%
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} [213]//
+    \glpreamble finite verb --- \Inf{} --- \Obj{} [213]; \Cref{app:sources}//
         \gla 	Mi-vel \textbf{igyekez-t-étek} megnyugtat-ni magatokat, amikor elhagyott a szerelmetek több év után?//
         \glb 	what-\Com{} strive-\Pst-\Tsg.\Sbj>\Third.\Obj{} calm-\Inf{} \Refl-\Tpl-\Acc{} when left the love-\Tpl{} several year after//
         \glft 	\enquote*{How did you try to calm yourselves when your lover left you after several years?}\trailingcitation{}//
     \endgl
 \xe
-%\ex\label{ex:megkerulni}%
-%    \begingl
-%        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
-%        \gla 	hogy milyen sokan igyekez-t-étek \nogloss{\dots} megkerül-ni országunk legszebb tav-á-t, a Balatont.//
-%        \glb 	that how many try-\Pst-\Spl.\Sbj>\Third.\Obj{} {go around}-\Inf{} country-\Pl{} {most beautiful} lake-\Tsg-\Acc{}, the Balaton-\Acc{}//
-%        \glft 	\enquote*{\dots{} how many of you tried to go around our country's most beautiful lake, the Balaton.}\trailingcitation{facebook, Figura Photo, 23 May, 08:53}//
-%    \endgl
-%\xe
 
 \subsubsection{Third person plural subject, third person object}\label{sub:3pl-3}
 
 Examples with third person plural subjects, agreement with third person
 definite objects (\Tpl.\Obj):
 
-%\ex\label{ex:landzsa-keszul}%
-%    \begingl
-%        \glpreamble \Inf{} --- finite verb --- \Obj{} [213]//
-%        \gla 	\nogloss{\dots} a lándzsá-ik-kal épp csikiz-ni készül-ik a hatalmas tappancs-á-t.//
-%        \glb 	the spear.\Poss-\Pl-\Tpl-\Com{} just tickle-\Inf{} prepare-\Tpl.\Obj{} the massive paw-\Tsg-\Acc{}//
-%        \glft 	\enquote*{They are preparing to tickle his massive paw with their spears.}\trailingcitation{}//
-%    \endgl
-%\xe
-\ex\label{ex:buntetes-keszul}%
-    \begingl
-        \glpreamble \Obj{} --- finite verb --- \Inf{} [312]//
-        \gla 	\nogloss{\dots} a fogadás elvesztés-é-ért járó büntetés-ük-et \textbf{készül-ik} letölt-eni.//
-        \glb 	the bet loss-\Tsg-for deserved punishment-\Tpl-\Acc{} prepare-\Tpl.\Obj{} spend-\Inf{}//
-        \glft 	\enquote*{\dots{} they were preparing to sit out the punishment they got losing the bet.}\trailingcitation{}//
-    \endgl
-\xe
 \ex\label{ex:szandek-bp}
     \begingl
     \glpreamble \Obj{} --- \Inf{} --- finite verb [321]; \gls{MNSZ}/doc\#901//
@@ -526,105 +329,121 @@ definite objects (\Tpl.\Obj):
         \glft 	\enquote*{that some people intend or intended to harm the General Assembly of Budapest}//
     \endgl
 \xe
-%\ex\label{ex:hazas-keszul}%
-%    \begingl
-%        \glpreamble \Obj{} --- X --- finite verb --- \Inf{} [2X13]; topical \Obj{}//
-%        \gla 	Szerelm-ük-et házasság-gal készül-ik megpecsétel-ni//
-%        \glb 	love-\Tpl-\Acc{} marriage-\Com{} prepare-\Tpl.\Obj{} stamp-\Inf{}//
-%        \glft 	\enquote*{They plan to fulfil their love with marriage.}//
-%    \endgl
-%\xe
-%\ex
-%    \begingl
-%        \glpreamble finite verb --- \Inf{} --- \Obj{} [132]//
-%        \gla 	valami porhintés-sel próbálkoz-zák megvezet-ni az ügyfel-et.//
-%        \glb 	something mockery-\Com{} try-\Tpl.\Obj{} mislead-\Inf{} the client-\Acc{}//
-%        \glft 	\enquote*{they're trying to mislead the client with some kind of mockery}\trailingcitation{\url{http://kispad.hu/blog/200512/ugyfelszolgalat.html}}//
-%    \endgl
-%\xe
 \ex\label{ex:lovag-igyek}
     \begingl
-        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]//
+        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]; \Cref{app:sources}//
         \gla 	Ezért a német lovag-ok a 14. század-ban \textbf{igyekez-t-ék} elfoglal-ni Litvániá-t is.//
         \glb 	{because of this} the German knight-\Pl{} the 14th century-\Ine{} strive-\Pst-\Tpl.\Obj{} conquer-\Inf{} Lithuania-\Acc{} too//
         \glft 	\enquote*{Because of this, in the 14th century the German knights strove to conquer Lithuania as well.}\trailingcitation{}//
     \endgl
 \xe
-%\ex\label{ex:fog-igyek}%
-%    \begingl
-%        \glpreamble \Obj{} --- X --- finite verb --- \Inf{} [3X12]; topical \Obj{}//
-%        \gla 	A fog-ak-at már az ókor-ban is igyekez-t-ék pótol-ni.//
-%        \glb 	the tooth-\Pl-\Acc{} already the antiquity-\Ine{} too strive-\Pl-\Tpl.\Obj{} replace-\Inf{}//
-%        \glft 	\enquote*{They aimed to replace teeth already in antiquity.}\trailingcitation{}//
-%    \endgl
-%\xe
 
 \section{Distribution of agreement}\label{sec:distribution-of-agreement}
 
 \subsection{Person}
 
-The examples in~\Cref{sec:data} show that object agreement with \emph{third}
-person definite objects is found with intransitive verbs like
-\emph{próbálkozik}, \emph{készül} and \emph{igyekszik}. This is true for any
-combination of person of subject and object where object agreement is overtly
-coded.
+\Cref{tb:lda-distr} shows that object agreement with third person definite
+objects is found with intransitive verbs, in contrast to many claims in the
+literature. This is true for any combination of person of subject and object
+where object agreement is overtly coded. In particular, the difference between
+agreement with \Second{}nd and \Third{}rd person objects is not
+categorical: both can trigger object agreement.
+%
+Each cell in~\Cref{tb:lda-distr} with \faCheck{} has at least one attested
+instance of agreement with an object of that person. In the empty cells
+in~\Cref{tb:lda-distr}, there are no distinct object agreement forms in the
+first place.
 
-Each cell in~\Cref{tb:lda-distr} with \ding{51} has at least one attested
-instance of agreement with an object of that person with at least one verb.  In
-the empty cells in~\Cref{tb:lda-distr}, the verb forms are intransitive anyway,
-so there is nothing to look for. Both singular and plural subjects can agree
-with \Third{}rd person objects.
-
-\paragraph{Agreement with \Second{}nd and \Third{}rd person}
-
-The difference between agreement with \Second{}nd and \Third{}rd person objects
-is gradient, not categorical. In other words, the data shown in~\Cref{sec:data}
-indicate that object agreement between intransitive matrix verbs and \Third{}rd
-person objects of the embedded infinitival exists, with any subject person ---
-cf.~\Cref{tb:lda-distr}.
-
-\renewcommand{\arraystretch}{1.25}
 \begin{table}[htpb]
     \centering
     \rowcolors{2}{gray!10}{white}
     \begin{tabular}{llll}
     \toprule
-    $\downarrow$ \Sbj{}, \Obj{} $\rightarrow$ & \First{} & \Second{} & \Third{} \\
+    \Sbj{} / \Obj{} & \First{} & \Second{}           & \Third{} \\
     \midrule
-    \Fsg{}                                    &          & \ding{51}~(\ref{ex:itv-inf}c) & \ding{51}~\eqref{ex:windows-keszul}--\eqref{ex:elhagyni-keszul} \\
-    \Fpl{}                                    &          &           & \ding{51}~\eqref{ex:meat-market}--\eqref{ex:elet}\\
-    \Ssg{}                                    &          &           & \ding{51}~\eqref{ex:oxford-keszul}--\eqref{ex:meg-probal}\\
-    \Spl{}                                    &          &           & \ding{51}~\eqref{ex:mennyi}--\eqref{ex:magatokat} \\
-    \Tsg{}                                    &          &           & \ding{51}~\eqref{ex:bella-keszul}--\eqref{ex:barat-szandek} \\
-    \Tpl{}                                    &          &           & \ding{51}~\eqref{ex:landzsa-keszul}--\eqref{ex:fog-igyek} \\
+    \Fsg{}          &          & (\ref{ex:itv-inf}c) & \eqref{ex:windows-keszul} \\
+    \Fpl{}          &          &                     & \eqref{ex:meat-market}--\eqref{ex:siet-civilizacio}\\
+    \Ssg{}          &          &                     & \eqref{ex:oxford-keszul}--\eqref{ex:meg-probal}\\
+    \Spl{}          &          &                     & \eqref{ex:mennyi}--\eqref{ex:magatokat} \\
+    \Tsg{}          &          &                     & \eqref{ex:birtok}--\eqref{ex:barat-szandek} \\
+    \Tpl{}          &          &                     & \eqref{ex:szandek-bp}--\eqref{ex:lovag-igyek} \\
     \bottomrule
     \end{tabular}
-    \caption{Distribution of LDA with intransitive matrix verbs}\label{tb:lda-distr}
+    \caption{Distribution of LDA with intransitive matrix
+    verbs}\label{tb:lda-distr}
 \end{table}
+
+It is clear, however, that the overall frequency of long-distance agreement
+with these predicates that do not take \Acc{} \glspl{DO} is much lower than
+with transitive verbs like \emph{akar}, for
+example.~\Cref{tb:mnsz-person-counts} shows the distribution of different
+person combinations for \emph{igyekszik}, \emph{készül} and
+\emph{szán\-dé\-kozik} as well as \emph{akar} from the \gls{MNSZ} (disregarding
+examples from other sources). For the intransitive verbs, these are the total
+number of occurrences in both present and past tense, while for \emph{akar} I
+restricted the search to 500 occurrences for each tense, with 302 (present) and
+357 (past) occurrences remaining after removing misclassified examples and
+duplicates. \Fsg>\Third{} is not taken into account because of syncretism of
+the relevant forms.
+
+\begin{table}[htpb]
+    \centering
+    \rowcolors{2}{gray!10}{white}
+    \begin{tabular}{lllllll}
+    \toprule
+        & \Fpl{}>\Third{} & \Fsg{}>\Second{} & \Ssg{}>\Third{} & \Spl{}>\Third{} & \Tsg{}>\Third{} & \Tpl{}>\Third{} \\
+    \midrule
+    \emph{igyekszik} & 84 & 17 & 13 & 0 & 84 & 148\\
+    \emph{készül} & 2 & 0 & 0 & 0 & 3 & 5 \\
+    \emph{szándékozik} & 43 & 0 & 8 & 1 & 156 & 173\\
+    \midrule
+    \emph{akar} & 30 & 21 & 49 & 6 & 427 & 126\\
+    \bottomrule
+    \end{tabular}
+    \caption{Distribution of person configurations for different verbs
+    from the \gls{MNSZ}}\label{tb:mnsz-person-counts}
+\end{table}
+
+While the totals for each row differ strongly, the distribution of person forms
+in each row is relatively similar. Third person subjects are the most frequent
+for each verb. While this is probably partly due the nature of the texts in the
+corpus, it is worth noting that \Fpl>\Third{} forms are more frequent than
+\Fsg{}>\Second{} for each verb as well, even though \Fsg>\Second{} has been
+claimed to be the only grammatical form of long-distance agreement for
+intransitive verbs such as \emph{igyekszik}.
 
 \subsection{Word orders}\label{sub:word-orders}
 
-Examples with overt objects are coded with a permutation of [123], indicating
-the order of the finite matrix verb (1), the infinitive (2) and the object (3).
+The examples in~\Cref{sec:data} show five of the six possible permutations of
+the order of the finite matrix verb (1), the infinitive (2) and the object (3),
+shown in~\Cref{tb:data-orders}.
 
-\pex\label{data:word-orders}%
-    \a  {}[123]:~\eqref{ex:oxford-keszul},~\eqref{ex:birtok},~\eqref{ex:lovag-igyek}
-    \a  {}[132]:~\eqref{ex:remalom}
-    \a  {}[213]:~\eqref{ex:meat-market},~\eqref{ex:magatokat}
-    \a  {}[231]:
-    \a  {}[312]:~\eqref{ex:windows-keszul},~\eqref{ex:barat-szandek},~\eqref{ex:buntetes-keszul}
-    \a  {}[321]:~\eqref{ex:szandek-bp}
-\xe
-The orders [312] and [213] mostly indicate focusing of either the object [312]
-or the infinitive [213] in the matrix focus position. Both of these orders lead
-to adjacency between the finite verb and the object\footnote{Maybe adjacency
-helps construing the object as an argument of the matrix verb;
-see~\textcite{Peredy2009} for discussion w.r.t.\ object agreement.} but object
-agreement is found without adjacency as well.
+\begin{table}[htpb]
+    \centering
+    \begin{tabularx}{1\textwidth}{lXXXXXX}
+    \toprule
+        & 123 & 132 & 213 & 231 & 312 & 321 \\
+    \midrule
+    Ex. & \eqref{ex:oxford-keszul},~\eqref{ex:birtok},~\eqref{ex:lovag-igyek} &
+                \eqref{ex:remalom} &
+                    \eqref{ex:meat-market},~\eqref{ex:magatokat} &
+                        &
+                            \eqref{ex:windows-keszul},~\eqref{ex:barat-szandek} &
+                                \eqref{ex:szandek-bp} \\
+    \bottomrule
+    \end{tabularx}
+    \caption{Distribution of word orders in examples
+    from~\Cref{sec:data}}\label{tb:data-orders}
+\end{table}
 
-[231] order involves fronting both the infinitive, as a (contrastive) topic,
-and the object, as a matrix focus; a constructed example with the transitive
-verb \emph{akar} is shown in (\nextx):
+Orders 312 and 213 indicate movement of either the object (312) or the
+infinitive (213) into the matrix clause, often as a focus. Both of these orders
+lead to adjacency between the finite verb and the object in the majority of
+cases\footnote{Maybe adjacency helps construing the object as an argument of
+the matrix verb \parencite{Peredy2009}.} but object agreement is found without
+adjacency as well. Order 231 involves fronting both the infinitive, as a
+(contrastive) topic, and the object, as a matrix focus; a constructed example
+with the transitive verb \emph{akar} is shown in (\nextx):
 
 \ex
     \begingl
@@ -633,42 +452,59 @@ verb \emph{akar} is shown in (\nextx):
         \glft 	\enquote*{As for reading, it is the book I want to read.}//
     \endgl
 \xe
-I do not see a principled reason for ruling out [231] (as in (\lastx)) with an
+I do not see a principled reason for ruling out 231 (as in (\lastx)) with an
 intransitive verb like \emph{igyekszik}, \emph{készül}, etc., given the range
-of data found with other orders shown in~\eqref{data:word-orders}. However,
-checking around 500 examples of \emph{akar} with infinitival complements did
-not produce any [231] orders either, suggesting that this order is generally
-rare, not just when the matrix verb is intransitive.
+of data found with other orders shown in~\Cref{tb:data-orders}.
+%
+However, the 659 examples of \emph{akar} with infinitival complements did not
+produce any 231 orders either, suggesting that this order is generally rare,
+not just when the matrix verb is intransitive.
 
-\paragraph{Interim summary: word orders}
+\Cref{tb:mnsz-order-counts} shows the distribution of word orders for the four
+verbs from~\Cref{tb:mnsz-person-counts} with their proportions. Once again, the
+total numbers considerably differ for the intransitive verbs vs.\ \emph{akar},
+but the distributions are similar: 123 is the most common order for
+\emph{igyekszik}, \emph{szándékozik} and \emph{akar}, with 312 the second most
+frequent.
 
-Out of six possible permutations of the word order of the intransitive finite
-matrix verb, an object, and the infinitive, five are readily found. Orders are
-influenced by information structure, exhibiting focus and topic movement.
-Object agreement between an intransitive matrix verb and the object of the
-infinitive is thus not restricted to special word orders or special
-configurations of information structure.
+\begin{table}[htpb]
+    \centering
+    \rowcolors{2}{gray!10}{white}
+    \begin{tabular}{llllllll}
+    \toprule
+        & 123 & 132 & 213 & 231 & 312 & 321 & \emph{pro} \\
+    \midrule
+    \emph{igyekszik} & 174 & 36 & 5 & 0 & 93 & 6 & 32\\
+    \emph{készül} & 3 & 0 & 6 & 0 & 1 & 0 & 2 \\
+    \emph{szándékozik} & 102 & 22 & 35 & 0 & 161 & 30 & 31 \\
+    \midrule
+    \emph{akar} & 266 & 44 & 35 & 0 & 169 & 11 & 134 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Distribution of person configurations for different verbs
+    from the \gls{MNSZ}}\label{tb:mnsz-order-counts}
+\end{table}
+
+In sum, the same five word orders that are attested for \emph{akar} with
+infinitival complements are readily found for \emph{igyekszik} and
+\emph{szándékozik} (see also the data in~\Cref{sec:data}). Orders might be
+influenced by information structure, exhibiting focus and topic movement, but
+there do not seem to be any clear differences in the distribution of word
+orders for transitive or intransitive matrix verbs.
 
 \subsection{Past tense}\label{sub:past-tense}
 
-\Textcite{denDikken2004} points out out that with verbs forming
-\enquote{come/go verb aspectual constructions} the grammaticality of object
-agreement, in particular \Second{}nd person agreement, depends on tense. For
-example, \emph{jön} can form a \Fsg>\Second.\Obj{} form in the past but not the
-present tense, as shown in (\nextx).
+\Textcite{denDikken2004} points out that the grammaticality of object
+agreement, in particular \Second{}nd person agreement, depends on tense with
+verbs forming \enquote{come/go verb aspectual constructions} . For example,
+\emph{jön} can form a \Fsg>\Second.\Obj{} form in the past but not the present
+tense, as shown in (\nextx).
 
-\pex
-    \a
+\ex
     \begingl
-        \gla 	Jö-tt-elek meg-látogat-ni \nogloss{(} @ téged\emph{)}.//
-        \glb 	come-\Pst-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc{}//
-        \glft 	\enquote*{I came to visit you.}//
-    \endgl
-    \a
-    \begingl
-        \gla 	\ljudge*Jö-lek meg-látogat-ni \nogloss{(} @ téged\emph{)}.//
-        \glb 	come-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc{}//
-        \glft 	intended: \enquote*{I am coming to visit you.}\trailingcitation{\parencite[451]{denDikken2004}}//
+        \gla 	Jö-tt-elek \nogloss{/ } \ljudge*jö-lek meg-látogat-ni \nogloss{(} @ téged\emph{)}.//
+        \glb 	come-\Pst-\Fsg>\Second.\Obj{} come-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc{}//
+        \glft 	\enquote*{I came to visit you.}\trailingcitation{\parencite[451]{denDikken2004}}//
     \endgl
 \xe
 Other verbs with similar semantics and argument structure, like \emph{jár}
@@ -676,31 +512,20 @@ Other verbs with similar semantics and argument structure, like \emph{jár}
 past, although as with all data presented here, there is variation in how
 acceptable these forms are:
 
-\pex
-    \a
+\ex
     \begingl
-        \gla 	Jár-lak meg-látogat-ni \nogloss{(}téged\emph{)}.//
-        \glb 	go-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc//
+        \gla 	Jár-lak \nogloss{/} jár-ta-lak meg-látogat-ni \nogloss{(}téged\emph{)}.//
+        \glb 	go-\Fsg>\Second.\Obj{} go-\Pst-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc//
         \glft 	\enquote*{I go to visit you regularly.}//
     \endgl
-    \a
-    \begingl
-        \gla 	Jár-ta-lak meg-látogat-ni \nogloss{(}téged\emph{)}.//
-        \glb 	go-\Pst-\Fsg>\Second.\Obj{} \Vm-visit-\Inf{} you.\Acc//
-        \glft 	\enquote*{I went to visit you regularly.}//
-    \endgl
 \xe
-%I suggest that the reason here is not semantic, but rather morphological:
-%past tense stems are always regular, present tense stems need not be.
-
-\paragraph{Preference for past tense: morphology?}
 
 A reason for why past tense forms like \emph{jö-tt-elek}
 \enquote*{come-\Pst-\Fsg>\Second.\Obj} are more acceptable than their present
 tense counterparts \emph{*jö(l)-lek} \enquote*{come-\Fsg>\Second.\Obj} can lie
 in morphology. The present tense forms of \emph{jön}, \emph{megy}, \emph{lenni}
 are irregular, while their past tense forms are regular, based on a single stem
-ending in \emph{-t}.  It is straightforward to form analogical (agreeing)
+ending in \emph{-t}. It is straightforward to form analogical (agreeing)
 patterns based on transitive forms in the past; this is not possible in the
 present tense --- cf.~\Cref{tb:jon-prs-pst}.
 
@@ -723,88 +548,80 @@ present tense --- cf.~\Cref{tb:jon-prs-pst}.
     (irregular) and \emph{jár} \enquote*{go (regularly)}}\label{tb:jon-prs-pst}
 \end{table}
 
-\subsection{Extraction}\label{sub:question-words}
-
-\textcite[34]{KenVagFeny1998} suggest that only predicates like \emph{akar}
-\enquote*{want} and \emph{megpróbál} \enquote*{try} can occur with question
-words like \emph{mi-t} \enquote*{what-\Acc}. (\nextx) is a counterexample;
-note that there is no object agreement here since \emph{mit} never triggers
-object agreement.
-
-\ex\label{ex:mit-igyek}%
-    \begingl
-        \gla 	Mi-t igyekez-t-él elmond-ani nekem?//
-        \glb 	what-\Acc{} strive-\Pst-\Ssg.\Sbj{} tell-\Inf{} I.\Dat{}//
-        \glft 	cf.\ original \enquote*{What were you trying to tell me?}\trailingcitation{(Paula Hawkins, \emph{Into the Water}; translated by Tomori Gábor)}//
-    \endgl
-\xe
-
-\subsection{More on \emph{jár}}\label{sub:more-on-jar}
-
-\emph{jár}, while generally intransitive, can be used transitively with
-locational objects straightforwardly (also with different \Vm{}s):
-
-\pex
-    \a
-    \begingl
-        \gla 	Jár-om az ut-am.//
-        \glb 	go-\Fsg.\Sbj>\Third.\Obj{} the way-\Fsg{}.\Poss{}//
-        \glft 	\enquote*{I am going my way.}//
-    \endgl
-    \a
-    \begingl
-        \gla 	Jár-ja az ut-já-t.//
-        \glb 	go-\Tsg.\Sbj>\Third.\Obj{} the way-\Tsg{}-\Acc{}//
-        \glft 	\enquote*{S/he is going his/her way.}//
-    \endgl
-\xe
+As \textcite{denDikken2004} also mentions, \emph{jár}, while generally
+intransitive, can be used transitively with locational objects
+straightforwardly (also with different \Vm{}s), for example in \emph{jár-ja az
+útját} \enquote*{I am going my way}.
+%
 In contrast to the predicates in~\Cref{sec:data}, however, it agrees with the
 object of the infinitive in even fewer cases. An attested example is shown in
 (\nextx).
 
 \ex\label{ex:jarta-nezni}
     \begingl
+        \glpreamble finite verb --- \Inf{} --- \Obj{} [123]; \Cref{app:sources}//
         \gla 	Két nap-ig a falu nép-e jár-t-a néz-ni a fölakasztott ember-t.//
         \glb 	two day-\Term{} the village people-\Tsg{} go-\Pst-\Tsg.\Sbj>\Third.\Obj{} watch-\Inf{} the hung person-\Acc{}//
         \glft 	\enquote*{The villagers went to watch the hung person for two days.}//
     \endgl
 \xe
-%Speakers' judgments on similar examples vary: agreeing \emph{készül} seems more
-%frequent than agreeing \emph{jár}, but this needs to be checked in detail.
+
+It is not clear what causes different frequencies of long-distance agreement in
+the present and past tense, although morphological regularity arguably plays a
+role. For \emph{igyekszik}, \emph{szándékozik} and \emph{akar}, past tense
+forms are more frequent in the \gls{MNSZ}, although this is probably again
+influenced by the nature of the texts in the corpus. The ratios of past tense
+to present are roughly equal for \emph{szándékozik} (1.14) and \emph{akar}
+(1.18) but higher for \emph{igyekszik} (6.69). This could be related to
+morphology as well: \emph{igyekszik} has less regular present tense forms
+than the other verbs.
+
+\subsection{Summary}\label{sub:summary}
+
+The main difference between typical long-distance agreement with a transitive
+verb like \emph{akar} and the intransitive verbs surveyed in~\Cref{sec:data} is
+in the overall frequency of the constructions. The total occurrences of
+\emph{igyekszik} (346) and \emph{szándékozik} (381) with long-distance
+agreement in the \gls{MNSZ} are a fraction of the total for \emph{akar}. The
+distribution of long-distance agreement with respect to the person of the
+object (and the subjcet) as well as word orders does not seem to differ
+strongly for different verbs
+(see~\Cref{tb:mnsz-person-counts,tb:mnsz-order-counts}).
+%
+The fact that a range of verbs that do not take \Acc{} objects appear in a
+long-distance agreement construction in the \gls{MNSZ} and other sources on the
+internet clearly indicates that there is no general ban on object agreement
+with these verbs.
 
 \section{Towards an analysis}\label{sec:analysis}
 
-To the degree that it is accepted, agreement between an intransitive matrix
-verb and the infinitive's object is \emph{regular}, i.e.\ a definite second or
-third person object can trigger object agreement, but an indefinite object
-cannot. This is schematically shown in~\eqref{ex:types}.
+The data in the previous sections showed that agreement between an intransitive
+matrix verb and the infinitive's object, albeit much less frequent than with
+transitive verbs, is nevertheless \emph{regular}, i.e.\ a definite second or
+third person object can trigger object agreement. The attested patterns are
+schematically shown in~\eqref{ex:types}.
 
-\pex\label{ex:types}
-    \a 	{}[ V-\Sbj{} \dots{} [\tss{\Inf} V DP-\Def{} ]]\trailingcitation{\faCheck}
-    \a 	{}[ V-\Obj{} \dots{} [\tss{\Inf} V DP-\Def{} ]]\trailingcitation{\faCheck}
-    \a 	{}[ V-\Sbj{} \dots{} [\tss{\Inf} V DP-\Indef{} ]]\trailingcitation{\faCheck}
-    \a 	{}[ V-\Obj{} \dots{} [\tss{\Inf} V DP-\Indef{} ]]\trailingcitation{\faTimes}
-\xe
-Transitive matrix verbs show types (\ref{ex:types}b,c). Intransitive verbs
-can additionally show type (\ref{ex:types}a). But neither class would show
-(\ref{ex:types}d), e.g.\ object agreement with an indefinite object.
+\pex\label{ex:types} \a 	{}[ V-\Sbj{} \dots{} [\tss{\Inf} V DP-\Def{}
+]]\trailingcitation{\faCheck} \a 	{}[ V-\Obj{} \dots{} [\tss{\Inf} V
+DP-\Def{} ]]\trailingcitation{\faCheck} \a 	{}[ V-\Sbj{} \dots{} [\tss{\Inf} V
+DP-\Indef{} ]]\trailingcitation{\faCheck} \a 	{}[ V-\Obj{} \dots{}
+[\tss{\Inf} V DP-\Indef{} ]]\trailingcitation{\faTimes} \xe Transitive matrix
+verbs show types (\ref{ex:types}b,c). Intransitive verbs can additionally show
+type (\ref{ex:types}a). But neither class would show (\ref{ex:types}d), e.g.\
+object agreement with an indefinite object.
+%
+These patterns can be accounted for as follows. Verbs that do not take \Acc{}
+\glspl{DO} can be unergative (\emph{igyekszik}, \emph{siet}) or unaccusative
+(\emph{jön}), suggesting that this property alone does not determine their
+behaviour with respect to object agreement. I assume that even if unergative
+verbs project a \emph{v}P that introduces their agent, this \emph{v} might lack
+a φ-probe that can agree with an \Acc{} object.
 
-These patterns can be accounted for with a few assumptions:
-
-\begin{itemize}
-
-    \item 	being intransitive, verbs like \emph{készül}, \emph{próbálkozik},
-        \emph{igyekszik} etc.\ do not come with a $\phi$-probe that can agree
-        with an \Acc{} object
-
-    \item   but when these verbs appear with infinitival complements, they are
-        analogous to transitive verbs like \emph{akar}, \emph{fog} etc.\ which
-        agree with a different verb's object
-
-    \item 	this allows speakers to construe the \emph{intransitive}
-        verbs as having a $\phi$-probe with infinitival complements
-
-\end{itemize}
+When these verbs appear with infinitival complements, however, speakers can
+treat them as analogous to transitive verbs like \emph{akar}, \emph{fog}, or
+\emph{un} which regularly agree with the infinitive's \gls{DO} by construing
+the structures as having a φ-probe on \emph{v}, independently of the type of
+matrix verb, allowing it to agree with the infinitive's object.
 
 \pex[interpartskip=6ex]\label{ex:derivations}
     \a  Agreement with a definite third person object\\
@@ -822,105 +639,63 @@ analogously to transitives allow (\ref{ex:derivations}a,b), others allow
 (\ref{ex:derivations}c), the \enquote{standard} case. But there is no way to
 derive a pattern like~(\ref{ex:types}d).
 
-\subsection{Interim summary}
-
-If an intransitive with an infinitival complement has a $\phi$-probe, it
-behaves like a regular transitive: if the infinitival complement's object is
-definite, it will agree; if the object is indefinite, it will not.
-
-\begin{itemize}
-
-    \item 	agreement with objects of infinitival complements is regular
-
-    \item 	the distribution of probes on intransitive verbs is more
-        idiosyncratic
-
-    \item 	intransitives do not have (\Acc{}) objects, but subcategorisation
-        for an infinitival complement can add a probe
-
-    \item[\ding{224}]   much of the variation in agreement lies in when
-        there can be a probe
-
-    \item[\ding{224}] 	differences between intransitive verbs: regularity of
-        paradigms, possibly frequency?
-
-    \item[\ding{224}]   but the variation need not be in the syntax of
-        agreement
-
-\end{itemize}
-
-\section{Open questions}\label{sec:open-questions}
-
-\subsection{Second person agreement}\label{sub:2-agr}
-
-\pex
-    \a
-    \begingl
-        \gla 	Hagy-od \nogloss{(} @ János-nak\emph{)} meg-látogat-ni Péter-t.//
-        \glb 	let-\Tsg.\Sbj>\Third.\Obj{} János-\Dat{} \Vm-visit-\Inf{} Péter-\Acc{}//
-        \glft 	\enquote*{You allow Péter to be visited (by János).}//
-    \endgl
-    \a
-    \begingl
-        \gla 	Hagy-lak \nogloss{(*} @ János-nak\emph{)} meg-látogat-ni \nogloss{(} @ téged\emph{)}.//
-        \glb 	let-\Fsg>\Second.\Obj{} János-\Dat{} \Vm-visit-\Inf{} you.\Acc//
-        \glft 	\enquote*{I let you be visited (by János).}\trailingcitation{\parencite[453]{denDikken2004}}//
-    \endgl
-\xe
-\Textcite{denDikken2004} suggests that the obligatory absence of
-\emph{Jánosnak} in (\lastx b) indicates that agreement with a third person
-and agreement with a second person are different, since \emph{-lak/-lek} is
-blocked by the intervening \Dat{}.
-
-\subsubsection{Individual speakers?}
-
-Another question is why and to what degree speakers \emph{only} accept second
-person agreement but not third person agreement (or other patterns). This
-question has to be looked at by studying individual speakers in depth. The data
-above are more general and describe inter-speaker variation.
+%\subsection{Interim summary}
+%
+%If an intransitive with an infinitival complement has a $\phi$-probe, it
+%behaves like a regular transitive: if the infinitival complement's object is
+%definite, it will agree; if the object is indefinite, it will not.
+%
+%\begin{itemize}
+%
+%    \item 	agreement with objects of infinitival complements is regular
+%
+%    \item 	the distribution of probes on intransitive verbs is more
+%        idiosyncratic
+%
+%    \item 	intransitives do not have (\Acc{}) objects, but subcategorisation
+%        for an infinitival complement can add a probe
+%
+%    \item[\ding{224}]   much of the variation in agreement lies in when
+%        there can be a probe
+%
+%    \item[\ding{224}] 	differences between intransitive verbs: regularity of
+%        paradigms, possibly frequency?
+%
+%    \item[\ding{224}]   but the variation need not be in the syntax of
+%        agreement
+%
+%\end{itemize}
 
 \section{Conclusions}\label{sec:conclusions}
 
-Intransitive verbs with infinitival complements can agree with the object of
-the infinitive.
+I have argued that verbs that do not take \Acc{} objects can nevertheless show
+object agreement with definite \Acc{} objects of their infinitival complements.
+While this possibility has been mostly acknowledged for second person objects
+(and first person subjects) in the literature, I have presented data indicating
+that the distribution of long-distance agreement with intransitive verbs is in
+fact much wider.
+%
+This suggests that object agreement with second and third person objects should
+not be analysed as categorically different, as both are robustly attested in
+long-distance agreement involving intransitive verbs.
 
-\begin{itemize}
-
-    \item   Agreement is found with third person definite objects and
-        with second person objects
-
-    \begin{itemize}
-
-        \item 	with any subject person
-
-        \item   with different predicates
-
-        \item   with different information structures and word orders
-
-        \item 	in the present and the past tense alike
-
-    \end{itemize}
-
-    \item[\ding{224}]   Object agreement need not be categorically different
-        with third and second person objects
-
-    \item   Competing grammatical pressures can motivate agreement on
-        intransitives
-
-    \begin{itemize}
-
-        \item 	intransitive verbs do not select for objects: \emph{contra} agreement
-
-        \item 	analogy to transitive verbs in the same contexts: \emph{pro} agreement
-
-    \end{itemize}
-
-\end{itemize}
+It is also clear that while attested, long-distance agreement involving
+intransitive verbs is much rarer than with verbs taking \Acc{} objects. A
+plausible reason for this could be grammatical pressure against using verbs
+without \Acc{} objects with object agreement morphology. On the other hand,
+analogy to transitive verbs in the same contexts can license agreement for some
+speakers.
 
 \section*{Acknowledgments}
 
-Thanks to Krisztina Szécsényi for discussion, and Júlia Keresztes and Ádám
-Szalontai (as well as a few other native speakers) for judgements.
+This paper is dedicated to Katalin É.\ Kiss, who has been an extremely helpful,
+motivating colleague over the past ten years and whose linguistic work I have
+always admired.
+
+In addition, I want to thank Krisztina Szécsényi for discussing this topic with
+me several times, Júlia Keresztes and Ádám Szalontai (as well as a few other
+native speakers) for judgements, and Anna Bruggeman and Ádám Szalontai for
+discussion of the quantitative aspects of this paper.
 
 \newrefcontext[sorting=nyt]
 \printbibliography
@@ -929,8 +704,30 @@ Szalontai (as well as a few other native speakers) for judgements.
 
 \section{Sources}\label{app:sources}
 
-See \url{http://github.com/andrasbarany/icsh13/} for the full data set which
-also includes the search terms used in the \gls{MNSZ} as well as their document
-identifiers, and URLs for the data from other sources on the internet.
+See \url{http://github.com/andrasbarany/hungarian-lda/} for the full data set
+which also includes the search terms used in the \gls{MNSZ} as well as their
+document identifiers, and URLs for the data from other sources on the internet.
+
+{\sloppy
+{\scriptsize
+\begin{itemize}
+
+    \item[\eqref{ex:windows-keszul}] \url{https://sg.hu/forum/tema/986486185}
+    \item[\eqref{ex:oxford-keszul}] \url{http://www.angolnyelvtanitas.hu/angolnyelvtanitas-blog/tevhit-gyilkos-nyelvtanulasi-ertelmezo-kisszotar}
+    \item[\eqref{ex:meg-probal}] \url{https://www.fanfic.hu/merengo/reviews.php?sid=117490&a=1}
+    \item[\eqref{ex:birtok}] \url{http://spareoom.uw.hu/picspam/Rome_1x12.htm}
+    \item[\eqref{ex:barat-szandek}]
+        \url{https://library.hungaricana.hu/hu/view/BacsKiskunMegyeiNepujsag_1977_01/?pg=156\&layout=s}
+    \item[\eqref{ex:meat-market}] \url{http://lelkikoto.blog.hu/2017/03/16/letoltott_szerelem}
+    \item[\eqref{ex:siet-civilizacio}]
+        \url{https://www.arcanum.hu/hu/online-kiadvanyok/Mikszath-mikszath-osszes-muve-2A85B/cikkek-es-karcolatok-5186-kotet-40CD5/1880-szegedi-naplo-vezercikkek-es-egyeb-politikai-cikkek-59-kotet-4578F/243-sz-oktober-16-a-fenyuzes-45962/}
+    \item[\eqref{ex:mennyi}] \url{https://www.gyakorikerdesek.hu/szamitastechnika__hardverek__4002418-vailant-notebook-ot-fogunk-holnap-venni-anyukammal1ghz-processzor256-ram20-gb}
+    \item[\eqref{ex:remalom}] \url{http://www.varoszoba.hu/2016/03/12/mennyire-eredmenyes-a-harmas-kezeles/}
+    \item[\eqref{ex:magatokat}] \url{https://www.gyakorikerdesek.hu/csaladi-kapcsolatok__egyeb-kerdesek__1380679-mivel-igyekeztetek-megnyugtatni-magatokat-amikor-elhagyott-a-szerelmetek-tobb-e}
+    \item[\eqref{ex:lovag-igyek}] \url{https://hu.wikipedia.org/wiki/Szamogitia}
+    \item[\eqref{ex:jarta-nezni}] \url{http://docplayer.hu/8200672-Az-eucharisztia-elott.html}
+
+\end{itemize}}}
+
 
 \end{document}
