@@ -241,3 +241,9 @@ TSWLatexianTemp*
 
 # generated if using elsarticle.cls
 *.spl
+
+files
+*.odt
+*.pdf
+
+.gitignore
