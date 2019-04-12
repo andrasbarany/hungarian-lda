@@ -243,5 +243,6 @@ TSWLatexianTemp*
 *.spl
 
 files
+*.docx
 *.odt
 *.pdf
